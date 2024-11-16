@@ -60,37 +60,36 @@ Steps
 Install g++ (if not already installed):
 
 On Debian/Ubuntu-based distributions:
-bash
-Copy code
+
 sudo apt update
 sudo apt install g++
+
 On Red Hat/Fedora-based distributions:
-bash
-Copy code
+
 sudo dnf install g++
+
 Compile and Run the Code:
 
 Open a terminal and navigate to the directory with your C++ file.
 Compile the code using:
-bash
-Copy code
+
 g++ -o your_program_name your_program_file.cpp
+
 Run the program:
-bash
-Copy code
+
 ./your_program_name
+
 Running C++ Code from Both Platforms Using the Same Commands in VS Code
 If you want to use VS Code and have consistent commands across both platforms:
 
 Install VS Code on both Windows and Linux, following the steps above.
 In VS Code, open a Terminal and use platform-specific commands to build and run the program:
 Build:
-bash
-Copy code
+
 g++ -o program_name program_file.cpp
+
 Run:
-bash
-Copy code
+
 ./program_name
 
 ## 3.Main Architecture of the Code
