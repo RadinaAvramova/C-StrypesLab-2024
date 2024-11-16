@@ -172,8 +172,11 @@ PRINT: Prints all defined circuits.
 The program expects commands like:
 
 DEFINE AND_GATE(A, B) "A & B"
+
 RUN AND_GATE(1, 0)
+
 ALL AND_GATE
+
 FIND "truth_table.txt"
 
 ## 8.Conclusion
