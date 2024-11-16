@@ -53,7 +53,7 @@ bash
 Copy code
 .\your_program_name.exe
 
-2. Running C++ Code on Linux
+## 2. Running C++ Code on Linux
 On Linux, you can compile and run C++ code directly using the g++ compiler (which is often pre-installed on most Linux distributions).
 
 Steps
