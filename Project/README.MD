@@ -93,11 +93,15 @@ Run:
 ./program_name
 
 ## 3.Main Architecture of the Code
+
 The code is organized into the following key structures:
 
 IntegratedCircuit: Represents an integrated circuit, storing its name, logical expression, and arguments.
+
 CircuitInput: Stores the arguments (inputs) for a given integrated circuit.
+
 CircuitStorage: Manages a collection of integrated circuits with a fixed capacity.
+
 TruthTable: (not presented here, but mentioned) for storing and analyzing truth tables used for analyzing and generating logical functions.
 
 ## 4.Key Functions and Their Logic
