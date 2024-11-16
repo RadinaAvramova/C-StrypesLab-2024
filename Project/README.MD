@@ -105,32 +105,46 @@ CircuitStorage: Manages a collection of integrated circuits with a fixed capacit
 TruthTable: (not presented here, but mentioned) for storing and analyzing truth tables used for analyzing and generating logical functions.
 
 ## 4.Key Functions and Their Logic
+
 Parsing and Processing Functions
-parseIntegratedCircuit()
+
+1.parseIntegratedCircuit()
 
 Reads and creates an integrated circuit from the input stream.
+
 This function:
+
 Parses the circuit's name and its arguments.
+
 Reads the logical expression and converts it into tokens.
+
 Validates the expression against the arguments using validateCircuit().
-parseRunCommand()
+
+2.parseRunCommand()
 
 Parses a RUN command containing the circuit's name and specific argument values.
+
 Logical Expression Computation and Processing
-convertInfixToPostfix()
+
+1.convertInfixToPostfix()
 
 Converts an infix logical expression to postfix using the Shunting Yard algorithm to simplify computation.
-evaluatePostfixExpr()
+
+2.evaluatePostfixExpr()
 
 Computes the value of a logical expression in postfix form using a stack. It supports & (AND), | (OR), and ! (NOT) operators.
+3
 runCircuit()
 
 Takes a circuit and specific input values, substitutes arguments with values, and calculates the result.
+
 Command Handling Functions
-runAllCommand()
+
+1.runAllCommand()
 
 Executes a given circuit for all possible combinations of inputs, effectively generating its complete truth table.
-runFindCommand()
+
+2.runFindCommand()
 
 Calculates a logical expression for a circuit represented by a truth table. It uses logical synthesis based on the "1" entries.
 
@@ -140,12 +154,18 @@ Functions like freeIntegratedCircuit(), freeCircuitStorage(), and clearCharVecto
 ## 6.Main Program
 In main():
 
-A CircuitStorage instance with a maximum capacity is created.
-Commands are read and executed:
+1.A CircuitStorage instance with a maximum capacity is created.
+
+2.Commands are read and executed:
+
 DEFINE: Defines a new integrated circuit.
+
 RUN: Executes a circuit with specific inputs.
+
 ALL: Outputs results for all combinations of inputs.
+
 FIND: Generates a logical expression using a truth table from a file.
+
 PRINT: Prints all defined circuits.
 
 ## 7.Sample Command Flow
@@ -157,11 +177,15 @@ ALL AND_GATE
 FIND "truth_table.txt"
 
 ## 8.Conclusion
+
 The code demonstrates the fundamental principles of simulating logical circuits, using methods for:
 
-Parsing and validating input data.
-Converting and evaluating logical expressions.
-Managing memory and effectively utilizing vectors.
+1.Parsing and validating input data.
+
+2.Converting and evaluating logical expressions.
+
+3.Managing memory and effectively utilizing vectors.
+
 This is an efficient solution for simulating digital integrated circuits, leveraging basic algorithms for parsing and logical function computation.
 
 
