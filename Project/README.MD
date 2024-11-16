@@ -93,6 +93,72 @@ bash
 Copy code
 ./program_name
 
+Main Architecture of the Code
+The code is organized into the following key structures:
+
+IntegratedCircuit: Represents an integrated circuit, storing its name, logical expression, and arguments.
+CircuitInput: Stores the arguments (inputs) for a given integrated circuit.
+CircuitStorage: Manages a collection of integrated circuits with a fixed capacity.
+TruthTable: (not presented here, but mentioned) for storing and analyzing truth tables used for analyzing and generating logical functions.
+Key Functions and Their Logic
+Parsing and Processing Functions
+parseIntegratedCircuit()
+
+Reads and creates an integrated circuit from the input stream.
+This function:
+Parses the circuit's name and its arguments.
+Reads the logical expression and converts it into tokens.
+Validates the expression against the arguments using validateCircuit().
+parseRunCommand()
+
+Parses a RUN command containing the circuit's name and specific argument values.
+Logical Expression Computation and Processing
+convertInfixToPostfix()
+
+Converts an infix logical expression to postfix using the Shunting Yard algorithm to simplify computation.
+evaluatePostfixExpr()
+
+Computes the value of a logical expression in postfix form using a stack. It supports & (AND), | (OR), and ! (NOT) operators.
+runCircuit()
+
+Takes a circuit and specific input values, substitutes arguments with values, and calculates the result.
+Command Handling Functions
+runAllCommand()
+
+Executes a given circuit for all possible combinations of inputs, effectively generating its complete truth table.
+runFindCommand()
+
+Calculates a logical expression for a circuit represented by a truth table. It uses logical synthesis based on the "1" entries.
+Memory Management
+Functions like freeIntegratedCircuit(), freeCircuitStorage(), and clearCharVector() help release dynamically allocated memory. Memory management focuses on avoiding leaks, employing manual memory management for vectors and arrays.
+
+Main Program
+In main():
+
+A CircuitStorage instance with a maximum capacity is created.
+Commands are read and executed:
+DEFINE: Defines a new integrated circuit.
+RUN: Executes a circuit with specific inputs.
+ALL: Outputs results for all combinations of inputs.
+FIND: Generates a logical expression using a truth table from a file.
+PRINT: Prints all defined circuits.
+Sample Command Flow
+The program expects commands like:
+
+css
+Copy code
+DEFINE AND_GATE(A, B) "A & B"
+RUN AND_GATE(1, 0)
+ALL AND_GATE
+FIND "truth_table.txt"
+Conclusion
+The code demonstrates the fundamental principles of simulating logical circuits, using methods for:
+
+Parsing and validating input data.
+Converting and evaluating logical expressions.
+Managing memory and effectively utilizing vectors.
+This is an efficient solution for simulating digital integrated circuits, leveraging basic algorithms for parsing and logical function computation.
+
 
 
 
