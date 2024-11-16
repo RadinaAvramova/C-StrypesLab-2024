@@ -3,7 +3,7 @@
 
 To run C++ code on both Windows and Linux, you can follow these steps to set up your environment and execute the code.
 
-1. Running C++ Code on Windows
+## 1. Running C++ Code on Windows
 There are several ways to run C++ code on Windows, but one of the most popular is using Visual Studio Code (VS Code) with the g++ compiler from MinGW (Minimalist GNU for Windows) or using Microsoft Visual Studio.
 
 Using VS Code with MinGW on Windows
@@ -52,6 +52,7 @@ To run, open a terminal in VS Code (or Command Prompt in the project directory) 
 bash
 Copy code
 .\your_program_name.exe
+
 2. Running C++ Code on Linux
 On Linux, you can compile and run C++ code directly using the g++ compiler (which is often pre-installed on most Linux distributions).
 
